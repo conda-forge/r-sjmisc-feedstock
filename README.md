@@ -20,10 +20,10 @@ Current build status
 
 Current release info
 ====================
-[![Conda Recipe](https://img.shields.io/badge/recipe-r--sjmisc-green.svg)](https://anaconda.org/conda-forge/r-sjmisc)
-[![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-sjmisc.svg)](https://anaconda.org/conda-forge/r-sjmisc)
-[![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-sjmisc.svg)](https://anaconda.org/conda-forge/r-sjmisc)
-[![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-sjmisc.svg)](https://anaconda.org/conda-forge/r-sjmisc)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--sjmisc-green.svg)](https://anaconda.org/conda-forge/r-sjmisc) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-sjmisc.svg)](https://anaconda.org/conda-forge/r-sjmisc) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-sjmisc.svg)](https://anaconda.org/conda-forge/r-sjmisc) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-sjmisc.svg)](https://anaconda.org/conda-forge/r-sjmisc) |
 
 Installing r-sjmisc
 ===================
