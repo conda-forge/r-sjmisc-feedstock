@@ -1,4 +1,4 @@
-{% set version = "2.7.2" %}
+{% set version = "2.7.3" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/sjmisc_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/sjmisc/sjmisc_{{ version }}.tar.gz
-  sha256: 52e9b82d5e1d5093c00248cb1a686a0fef34197c01977be30a1dedbbcd5bc16d
+  sha256: c7b9a94539e4baf2b816453075e0aca584b841776547c828f31d7afb2e43a8b4
 
 build:
   number: 0
