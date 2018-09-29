@@ -1,5 +1,4 @@
-{% set version = "2.7.4" %}
-
+{% set version = '2.7.5' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,64 +9,55 @@ package:
 source:
   fn: sjmisc_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/sjmisc_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/sjmisc/sjmisc_{{ version }}.tar.gz
-  sha256: 0493ab463c825feb8ee4145f1125329dcc0f03c81d3bb531e7c58b1666029e85
+    - {{ cran_mirror }}/src/contrib/sjmisc_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/sjmisc/sjmisc_{{ version }}.tar.gz
+  sha256: 8f3551913baa08e2d7c0b0c9c4677bd534bc6a5a7fe25f0c0861ba2cb2c3d215
 
 build:
+  merge_build_host: True  # [win]
   number: 0
   skip: true  # [win32]
-
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
+  host:
     - r-base
-    - r-broom >=0.4.2
-    - r-cli
+    - r-broom >=0.4.5
     - r-crayon
-    - r-dplyr >=0.7.1
-    - r-haven >=1.0.0
+    - r-dplyr
+    - r-haven >=1.1.2
     - r-magrittr
-    - r-pillar
-    - r-psych
     - r-purrr
     - r-rlang
-    - r-sjlabelled >=1.0.8
+    - r-sjlabelled >=1.0.13
     - r-stringdist >=0.9.4
     - r-stringr >=1.2.0
-    - r-tibble >=1.4.1
-    - r-tidyr >=0.7.0
-    - r-tidyselect
-
+    - r-tidyr
   run:
     - r-base
-    - r-broom >=0.4.2
-    - r-cli
+    - r-broom >=0.4.5
     - r-crayon
-    - r-dplyr >=0.7.1
-    - r-haven >=1.0.0
+    - r-dplyr
+    - r-haven >=1.1.2
     - r-magrittr
-    - r-pillar
-    - r-psych
     - r-purrr
     - r-rlang
-    - r-sjlabelled >=1.0.8
+    - r-sjlabelled >=1.0.13
     - r-stringdist >=0.9.4
     - r-stringr >=1.2.0
-    - r-tibble >=1.4.1
-    - r-tidyr >=0.7.0
-    - r-tidyselect
+    - r-tidyr
 
 test:
   commands:
-    - $R -e "library('sjmisc')"  # [not win]
+    - $R -e "library('sjmisc')"           # [not win]
     - "\"%R%\" -e \"library('sjmisc')\""  # [win]
 
 about:
-  home: https://github.com/strengejacke/sjmisc
+  home: https://github.com/strengejacke/sjmisc, https://strengejacke.github.io/sjmisc
   license: GPL-3
   summary: Collection of miscellaneous utility functions, supporting data  transformation tasks
     like recoding, dichotomizing or grouping variables,  setting and replacing missing
@@ -79,9 +69,10 @@ about:
 
 extra:
   recipe-maintainers:
+    - ccwang002
     - johanneskoester
     - bgruening
     - daler
     - jdblischak
     - cbrueffer
-    - ccwang002
+    - dbast
