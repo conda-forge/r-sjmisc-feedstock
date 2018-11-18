@@ -14,9 +14,9 @@ source:
   sha256: 8f3551913baa08e2d7c0b0c9c4677bd534bc6a5a7fe25f0c0861ba2cb2c3d215
 
 build:
+  noarch: generic
   merge_build_host: True  # [win]
-  number: 0
-  skip: true  # [win32]
+  number: 1000
   rpaths:
     - lib/R/lib/
     - lib/
@@ -64,8 +64,7 @@ about:
     values. The data transformation functions  also support labelled data, and all integrate
     seamlessly into a  'tidyverse'-workflow.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
