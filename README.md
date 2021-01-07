@@ -5,11 +5,9 @@ Home: https://strengejacke.github.io/sjmisc
 
 Package license: GPL-3
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-sjmisc-feedstock/blob/master/LICENSE.txt)
 
 Summary: Collection of miscellaneous utility functions, supporting data  transformation tasks like recoding, dichotomizing or grouping variables,  setting and replacing missing values. The data transformation functions  also support labelled data, and all integrate seamlessly into a  'tidyverse'-workflow.
-
-
 
 Current build status
 ====================
