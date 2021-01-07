@@ -1,4 +1,4 @@
-{% set version = "2.8.5" %}
+{% set version = "2.8.6" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/sjmisc_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sjmisc/sjmisc_{{ version }}.tar.gz
-  sha256: 93fe7fd0260f5c4c66ec121e87a6607b7d0732cb2998a81252718dd04cd18076
+  sha256: 99792ea79dd1b2d88f637881c144fcbe06a6fa99feec4b57418b5b27cb9ed9d9
 
 build:
   merge_build_host: true  # [win]
