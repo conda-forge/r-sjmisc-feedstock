@@ -47,7 +47,7 @@ test:
 
 about:
   home: https://strengejacke.github.io/sjmisc
-  license: GPL-3
+  license: GPL-3.0-only
   summary: Collection of miscellaneous utility functions, supporting data  transformation tasks like recoding, dichotomizing or grouping variables,  setting and replacing missing values. The data transformation functions  also support labelled data, and all integrate seamlessly into a  'tidyverse'-workflow.
   license_family: GPL3
   license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
