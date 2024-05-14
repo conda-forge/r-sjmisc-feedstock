@@ -1,4 +1,4 @@
-{% set version = "2.8.9" %}
+{% set version = "2.8.10" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/sjmisc_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sjmisc/sjmisc_{{ version }}.tar.gz
-  sha256: 78b05741ce9e1cc783fda97a0f18caff689822fdd4bdf733dc20f7c94ac2f3bf
+  sha256: 2d64ab3551e6ac5993ade0dd269619063018decaa2fd34d56a2541209052c58b
 
 build:
   merge_build_host: true  # [win]
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
